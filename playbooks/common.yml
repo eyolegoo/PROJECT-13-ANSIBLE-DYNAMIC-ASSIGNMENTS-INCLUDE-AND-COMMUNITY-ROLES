@@ -11,6 +11,7 @@
         state: latest
 
 
+
 #------------------------------------------------------------------------------------------------------
 
 - name: update LB server
@@ -29,7 +30,7 @@
         state: latest
 
 
-#-------------------------------------------------------------------------------------------------------
+
 
 - name: create directory, file and set timezone on all servers
   hosts: webservers, nfs, db, lb
@@ -49,4 +50,5 @@
     - name: set timezone
       timezone:
         name: Africa/Lagos
+        
         
