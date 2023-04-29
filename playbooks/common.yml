@@ -9,8 +9,8 @@
       yum:
         name: wireshark
         state: latest
-        
-        
+
+
 #------------------------------------------------------------------------------------------------------
 
 - name: update LB server
@@ -19,6 +19,7 @@
   become: yes
   become_user: root
   tasks:
+
     - name: Update apt repo
       apt: 
         update_cache: yes
@@ -46,7 +47,7 @@
     - name: set timezone
       timezone:
         name: Africa/Lagos
-
+  
         
 
 
