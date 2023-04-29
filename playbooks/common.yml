@@ -9,9 +9,7 @@
       yum:
         name: wireshark
         state: latest
-
-
-
+        
 #------------------------------------------------------------------------------------------------------
 
 - name: update LB server
@@ -29,7 +27,7 @@
         name: wireshark
         state: latest
 
-
+ #--------------------------------------------------------------------------------------       
 
 
 - name: create directory, file and set timezone on all servers
@@ -50,5 +48,7 @@
     - name: set timezone
       timezone:
         name: Africa/Lagos
+
+
         
         
