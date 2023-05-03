@@ -9,3 +9,8 @@
 - tags:
   - wireshark  
 
+- name: uat-webservers
+- import_playbook: ../static-assignments/uat-webservers.yml
+- tags:
+  - uat-webservers
+
