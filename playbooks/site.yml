@@ -1,3 +1,11 @@
 ---
-- hosts: all
+- name: wireshark assignment 
+- import_playbook: ../static-assignments/common.yml
+- tags:
+  - wireshark
+
+- name: wireshark assignment 
 - import_playbook: ../static-assignments/common-del.yml
+- tags:
+  - wireshark  
+
