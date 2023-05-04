@@ -1,15 +1,10 @@
 ---
-- name: wireshark assignment 
+- host: wireshark assignment 
 - import_playbook: ../static-assignments/common.yml
 - tags:
   - wireshark
 
-- name: wireshark assignment 
-- import_playbook: ../static-assignments/common-del.yml
-- tags:
-  - wireshark  
-
-- name: uat-webservers
+- host: uat-webservers
 - import_playbook: ../static-assignments/uat-webservers.yml
 - tags:
   - uat-webservers
