@@ -1,11 +1,7 @@
 ---
-- hosts: wireshark assignment 
+- hosts: all
 - import_playbook: ../static-assignments/common.yml
-- tags:
-  - wireshark
 
 - hosts: uat-webservers
 - import_playbook: ../static-assignments/uat-webservers.yml
-- tags:
-  - uat-webservers
 
