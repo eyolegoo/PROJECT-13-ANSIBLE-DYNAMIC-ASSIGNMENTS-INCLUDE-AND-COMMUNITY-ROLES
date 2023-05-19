@@ -10,3 +10,11 @@
 - hosts: uat-webservers
 - import_playbook: ../static-assignments/uat-webservers.yml
 
+- name: Loadbalancers assignment
+  import_playbook: ../static-assignments/loadbalancers.yml
+  when: load_balancer_is_required 
+
+- name: import database file
+  import_playbook: ../static-assignments/database.yml
+  
+
