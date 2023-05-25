@@ -31,7 +31,6 @@
   notify: restart apache
 
 - name: Add apache vhosts configuration.
-  become: yes
   template:
     src: "{{ apache_vhosts_template }}"
     dest: "{{ apache_conf_path }}/{{ apache_vhosts_filename }}"
@@ -48,7 +47,6 @@
   when: ansible_distribution_major_version | int >= 8
 
 - name: Ensure httpd certs are installed (RHEL 8 and later).
-  become: yes
   command: /usr/libexec/httpd-ssl-gencerts
   when:
     - ansible_distribution_major_version | int >= 8
