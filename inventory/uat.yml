@@ -4,7 +4,7 @@
 [db]
 172.31.84.92 ansible_ssh_user='ec2-user'
 
-[uat-webservers]
+[webservers]
 172.31.21.86 ansible_ssh_user='ec2-user'
 172.31.23.143 ansible_ssh_user='ec2-user'
 
