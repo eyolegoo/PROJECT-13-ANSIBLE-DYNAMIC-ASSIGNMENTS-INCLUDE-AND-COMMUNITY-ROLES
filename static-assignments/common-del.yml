@@ -24,8 +24,5 @@
       autoremove: yes
       purge: yes
       autoclean: yes
-<<<<<<< HEAD
-      
-=======
-      
->>>>>>> 98ed007563e5bef6db8127fb4aafafe073d3fd35
+     
+    
