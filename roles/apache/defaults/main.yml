@@ -61,10 +61,11 @@ apache_restart_state: restarted
 # if you want to upgrade or switch versions using a new repo.
 apache_packages_state: present
 
+# defaults file for apache
 enable_apache_lb: false
 load_balancer_is_required: false
 
 # Webservers
 web1: 172.31.21.86
 web2: 172.31.23.143 
-lb: 172.31.88.216
+lb: 172.31.16.161
