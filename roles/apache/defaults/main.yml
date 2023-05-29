@@ -66,6 +66,6 @@ enable_apache_lb: false
 load_balancer_is_required: false
 
 # Webservers
-web1: 172.31.21.86
-web2: 172.31.23.143 
-lb: 172.31.16.161
+web1: 172.31.85.10
+web2: 172.31.95.48
+lb: 172.31.89.34
