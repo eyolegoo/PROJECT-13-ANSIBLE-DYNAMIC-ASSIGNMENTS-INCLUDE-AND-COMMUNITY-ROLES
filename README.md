@@ -230,8 +230,16 @@ git push --set-upstream origin roles-feature
 
 - You will activate load balancer, and enable **nginx** by setting these in the respective environment’s env-vars file.
   
+```
+enable_nginx_lb: true
+load_balancer_is_required: true 
+```  
   
-  
+- The same must work with **apache LB**, so you can switch it by setting respective environmental variable to **true** and other to **false**.
+
+- To test this, you can update inventory for each environment and run Ansible against each environment.
+
+
   
   
   
