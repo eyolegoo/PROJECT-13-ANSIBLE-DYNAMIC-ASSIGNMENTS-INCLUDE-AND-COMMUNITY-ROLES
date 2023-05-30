@@ -102,11 +102,11 @@ include = Dynamic
   
 1. - We used **include_vars** syntax instead of include, this is because Ansible developers decided to separate different features of the module. From **Ansible version 2.8**, the **include** module is deprecated and variants of **include_*** must be used. These are:
   
-  - [include_role](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/include_role_module.html#include-role-module)
+   - [include_role](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/include_role_module.html#include-role-module)
   
-  - [include_tasks](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/include_tasks_module.html#include-tasks-module)
+   - [include_tasks](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/include_tasks_module.html#include-tasks-module)
   
-  - [include_vars](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/include_vars_module.html#include-vars-module)
+   - [include_vars](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/include_vars_module.html#include-vars-module)
   
 - In the same version, variants of **import** were also introduces, such as:
   
