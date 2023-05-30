@@ -50,3 +50,50 @@ include = Dynamic
 └── static-assignments
     └── common.yml
 ```
+
+- Since we will be using the same Ansible to configure multiple environments, and each of these environments will have certain unique attributes, such as **servername**, **ip-address** etc., we will need a way to set values to variables per specific environment.
+  
+- For this reason, we will now create a folder to keep each environment’s variables file. Therefore, create a new folder env-vars, then for each environment, create new **YAML** files which we will use to set variables.
+  
+- Your layout should now look like this.
+  
+```
+├── dynamic-assignments
+│   └── env-vars.yml
+├── env-vars
+    └── dev.yml
+    └── stage.yml
+    └── uat.yml
+    └── prod.yml
+├── inventory
+    └── dev
+    └── stage
+    └── uat
+    └── prod
+├── playbooks
+    └── site.yml
+└── static-assignments
+    └── common.yml
+    └── webservers.yml  
+```
+  
+- Now paste the instruction below into the **env-vars.yml** file.
+  
+```
+---
+- name: collate variables from env specific file, if it exists
+  hosts: all
+  tasks:
+    - name: looping through list of available files
+      include_vars: "{{ item }}"
+      with_first_found:
+        - files:
+            - dev.yml
+            - stage.yml
+            - prod.yml
+            - uat.yml
+          paths:
+            - "{{ playbook_dir }}/../env-vars"
+      tags:
+        - always
+```
